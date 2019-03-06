@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.creation.ControllerCreation">
+    <children>
+
+        <ImageView fitHeight="720" fitWidth="1080" layoutX="0" layoutY="0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../Ressources/im_interface/menu_creation.png" />
+            </image>
+        </ImageView>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" translateX="-300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#clickEdtp" onMouseEntered="#labelPileE" onMouseExited="#labelPileE2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: D3D3D3;" translateX="490.0" translateY="350.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button disable="true" maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: aeaeae;" translateX="400.0" translateY="400.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#clickCreap" onMouseEntered="#labelPileC" onMouseExited="#labelPileC2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: D3D3D3;" translateX="340.0" translateY="150.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="PileC" style="-fx-background-color: eeeeee;" text="Création de pile" translateX="400.0" translateY="160.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PileE" style="-fx-background-color: eeeeee;" text="Edition de pile" translateX="400.0" translateY="130.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </right>
+         <left>
+                <VBox minHeight="600.0" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                    <children>
+
+
+                        <Button id="Création de Carte" depthTest="ENABLE" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#clickCreac" onMouseEntered="#labelCarteC" onMouseExited="#labelCarteC2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: D3D3D3;" textAlignment="CENTER" translateX="390.0" translateY="350.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor></Button>
+
+
+                        <Button maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#clickEdtc" onMouseEntered="#labelcarte" onMouseExited="#labelcarte2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: D3D3D3;" translateX="560.0" translateY="200.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicBACK" onMouseEntered="#labelRetour" onMouseExited="#labelRetour2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: D3D3D3;" translateX="-10.0" translateY="-250.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/retour1.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="Retour" style="-fx-background-color: eeeeee;" text="Retour" translateX="100.0" translateY="-290.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="carte" style="-fx-background-color: eeeeee;" text="Edition de carte" translateX="500.0" translateY="130.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CarteC" style="-fx-background-color: eeeeee;" text="Création de carte" translateX="460.0" translateY="110.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </VBox>
+         </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

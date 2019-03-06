@@ -1,0 +1,8 @@
+out
+.idea
+*.iml
+build
+questionReponse.txt
+.gradle
+.cache
+/bin/

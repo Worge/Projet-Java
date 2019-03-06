@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.ControllerAccueil">
+   <children>
+
+      <ImageView fitHeight="720" fitWidth="1080" layoutX="0" layoutY="0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/im_interface/accueil.png" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" translateX="-320.0" BorderPane.alignment="CENTER">
+               <children>
+      
+            
+                        <Button fx:id="b1" mnemonicParsing="false" onAction="#clickcreation" onMouseEntered="#changeb1" onMouseExited="#x" prefHeight="100" prefWidth="300.0" style="-fx-background-color: aeaeae;" textAlignment="CENTER" translateX="710.0" translateY="70.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                    <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Ressources/im_interface/a_btn1.png" />
+                           </image>
+                        </ImageView>
+                    </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+      
+            
+                        <Button fx:id="b2" mnemonicParsing="false" onAction="#clickjouer" onMouseEntered="#changeb2" onMouseExited="#x" prefHeight="100" prefWidth="300.0" style="-fx-background-color: aeaeae;" translateX="710.0" translateY="120.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Ressources/im_interface/a_btn2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+      
+            
+                        <Button fx:id="b3" mnemonicParsing="false" onAction="#clicExamen" onMouseEntered="#changeb3" onMouseExited="#x" prefHeight="100" prefWidth="300.0" style="-fx-background-color: aeaeae;" translateX="710.0" translateY="170.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Ressources/im_interface/a_btn3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="b4" mnemonicParsing="false" onAction="#statistiques" onMouseEntered="#changeb4" onMouseExited="#x" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: aeaeae;" translateX="710.0" translateY="220.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Ressources/im_interface/btn4.png" />
+                               </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <ImageView fx:id="easterEgg" fitHeight="446.0" fitWidth="319.0" onMouseClicked="#clicEasterEgg" pickOnBounds="true" preserveRatio="true" translateX="130.0" translateY="250.0" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../Ressources/im_interface/descartess.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="1.0" />
+               </rotationAxis>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

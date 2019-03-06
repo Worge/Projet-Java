@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.Examen.ControllerExamenJeu">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/im_interface/apprentisage2.png" />
+         </image></ImageView>
+      <BorderPane prefHeight="720.0" prefWidth="1080.0">
+         <right>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imV" fitHeight="156.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" translateX="52.0" translateY="335.0">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/rond2.png" />
+                     </image>
+                  </ImageView>
+                  <ProgressIndicator fx:id="pi" blendMode="EXCLUSION" prefHeight="175.0" prefWidth="175.0" progress="0.0" translateX="-20.0" translateY="180.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ProgressIndicator>
+                  <ImageView fx:id="imbar" fitHeight="50.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" scaleX="1.37" translateX="38.0" translateY="-125.0">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/rect1.png" />
+                     </image>
+                  </ImageView>
+                  <ProgressBar fx:id="pb" blendMode="EXCLUSION" minHeight="50.0" minWidth="275.0" prefWidth="200.0" progress="0.0" translateY="-175.0" />
+                  <Button maxHeight="135.0" maxWidth="100.0" minHeight="135.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicHome" onMouseEntered="#labelHome" onMouseExited="#labelHome2" prefHeight="135.0" prefWidth="100.0" translateX="85.0" translateY="-410.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/descartess.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label fx:id="Home" style="-fx-background-color: eeeeee;" text="Menu" translateX="14.0" translateY="-480.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
+         </right>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="LabelType" translateX="100.0" translateY="395.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelTheme" layoutX="10.0" layoutY="70.0" translateX="90.0" translateY="500.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox maxWidth="450.0" prefHeight="200.0" prefWidth="100.0" translateY="-75.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="question" alignment="TOP_LEFT" maxWidth="360.0" minHeight="180.0" prefHeight="180.0" text="Question de la Carte en cours" translateX="30.0" translateY="300.0" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Group fx:id="gVF" translateX="60.0" translateY="420.0" visible="false">
+                     <children>
+                        <Button fx:id="FAUX" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#isFalse" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: d8d8d8;" text="FAUX" translateX="250.0" translateY="220.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Ressources/im_interface/btn_non.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="VRAI" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#isTrue" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: d8d8d8;" text="VRAI" translateX="50.0" translateY="220.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Ressources/im_interface/btn_ok.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Group>
+                  <Group fx:id="gQCM" translateX="40.0" translateY="280.0" visible="false">
+                     <children>
+                        <Button fx:id="QCM3" mnemonicParsing="false" onAction="#selected3" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: aeaeae;" text="QCM3" translateY="100.0" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="QCM2" mnemonicParsing="false" onAction="#selected2" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: aeaeae;" text="QCM2" translateY="50.0" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="QCM1" minHeight="40.0" mnemonicParsing="false" onAction="#selected1" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: aeaeae;" text="QCM1" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="QCM4" mnemonicParsing="false" onAction="#selected4" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: aeaeae;" text="QCM4" translateY="150.0" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Group>
+                  <Group fx:id="gArea" translateX="65.0" translateY="100.0">
+                     <children>
+                        <TextField fx:id="reponseClassique" minWidth="300.0" onAction="#termine" translateY="100.0" />
+                     </children>
+                  </Group>
+                  <Button fx:id="btn" mnemonicParsing="false" onAction="#termine" style="-fx-background-color: d8d8d8;" translateX="150.0" translateY="130.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/btn_ok.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.apprentissage.ControllerApprentissageJeu">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/im_interface/apprentisage2.png" />
+         </image></ImageView>
+      <BorderPane prefHeight="720.0" prefWidth="1080.0">
+         <right>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="faux" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#nextF" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: e2e2e2;" translateX="150.0" translateY="350.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/btn_non.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="juste" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#nextJ" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: e2e2e2;" translateY="250.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/btn_ok.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button maxHeight="135.0" maxWidth="100.0" minHeight="135.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicHOME" onMouseEntered="#labelHome" onMouseExited="#labelHome2" prefHeight="135.0" prefWidth="100.0" style="-fx-background-color: d3d3d3;" translateX="80.0" translateY="-185.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="135.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/descartess.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ProgressBar fx:id="pb" blendMode="EXCLUSION" minHeight="50.0" minWidth="275.0" prefWidth="200.0" progress="0.0" translateY="-150.0" />
+                  <ProgressIndicator fx:id="pi" blendMode="EXCLUSION" prefHeight="175.0" prefWidth="175.0" progress="0.0" translateX="-20.0" translateY="-100.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ProgressIndicator>
+                  <Button fx:id="btn_termine" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#termine" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: e2e2e2;" translateX="80.0" translateY="-110.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/btn_ok.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label fx:id="home" style="-fx-background-color: eeeeee eeeeee;" text="Menu" translateX="18.0" translateY="-580.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="LabelType" translateX="100.0" translateY="390.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelTheme" layoutX="10.0" layoutY="70.0" translateX="90.0" translateY="500.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox maxWidth="450.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="question" alignment="TOP_LEFT" maxWidth="360.0" prefHeight="180.0" text="Question de la Carte en cours" translateX="30.0" translateY="220.0" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="reponse" alignment="TOP_LEFT" maxWidth="360.0" prefHeight="200.0" text="Reponse" translateX="30.0" translateY="310.0" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ImageView fx:id="cacheR" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" translateX="15.0" translateY="40.0">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/balzac.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

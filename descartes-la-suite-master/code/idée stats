@@ -1,0 +1,49 @@
+
+
+MODE EXAMEN :
+
+(plusieurs mode selon si y a la réponse ou pas à la fin)
+ttes les questions une seule fois
+
+
+---à la fin :
+
+note + question où a eu faux avec les réponses du mec et les vraies réponses
+si QCM : peut code couleur si s'est trompé ou réussi
+
+
+----GLOBAL :
+
+
+
+
+MODE APPRENTISSAGE :
+
+---à la fin :
+
+nombre de bonnes réponses et nombre de mauvaises réponses (cartes pas réussi du premier coup)
+pourcentage de réussite
+question à retravailler (???)
+regarder la dernière fois qu'il a fait les mêmes cartes ou pile ou thème (?)
+
+
+
+----GLOBAL :
+
+sur un bouton stat dans le menu global.
+
+par pile ou par thème (les même que à la fin)
+(peut pop à la fin de l'apprentissage pour certains) (???)
+
+BD : il faut : nouvelle table :
+
+-
+-
+-
+-
+
+
+
+
+
+

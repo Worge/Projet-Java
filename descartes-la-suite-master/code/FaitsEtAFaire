@@ -1,0 +1,41 @@
+
+---------- faits : -----------
+
+   ajouts : 
+2-3 petits trucs d'affichage,
+pop-ups,
+bouton pour tout cocher,
+ne peut plus changer le type d'une carte,
+fonction éditer dans CONTIENT
+
+   correction de bugs :
+2-3 petits trucs d'affichage,
+chronos,
+bouton recommencer,
+liens entre BD et controllers,
+1 seul question par ligne (/!\ARNAQUE !!)
+
+
+----------- à faire : ----------
+
+   Design :
+pop-ups,
+bouton recommencer,
+bouton "cocher tout"
+
+++++ ++++ optionnel ++++ +++++ (idées)
+
+quand appuie sur tab, changer de section
+et si entrer sur la réponse, valide directe la carte
+
+pour l'apprentissage, tous les afficher puis re-montrer ceux à travailler (plutôt que vrai random)
+
+ajouter des images ou vidéos
+
+mode statistique pour examen ?
+
+quand créer un pile, peut créer des cartes direct dedans
+Ou
+quand une recherche par mot (genre un -t)
+
+un truc pour retrouver les cartes où on a fait le + de fautes dans une pile

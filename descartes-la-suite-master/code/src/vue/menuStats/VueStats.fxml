@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.stats.ControllerStats">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/im_interface/stat.png" />
+         </image></ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox maxHeight="800.0" minHeight="750.0" translateY="-25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="indication" minWidth="480.0" textFill="#ab5c0d" translateX="312.0" translateY="129.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button maxHeight="135.0" maxWidth="100.0" minHeight="135.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicHOME" onMouseEntered="#labelHome" onMouseExited="#labelHome2" prefHeight="135.0" prefWidth="100.0" translateX="20.0" translateY="20.0">
+                     <graphic>
+                        <ImageView fitHeight="135.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/descartess.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="labelPile" alignment="CENTER" contentDisplay="CENTER" minWidth="850.0" text="TItre" textAlignment="CENTER" translateX="130.0" translateY="-112.0" underline="true" visible="false">
+                     <font>
+                          <Font name="System Bold Italic" size="64.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Home" style="-fx-background-color: eeeeee;" text="Menu" translateX="135.0" translateY="-95.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <BarChart fx:id="diagramme" maxWidth="1000.0" minHeight="550.0" minWidth="700.0" translateX="25.0" translateY="-80.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <HBox maxWidth="400.0" minHeight="500.0" minWidth="1000.0" opacity="0.0" prefHeight="500.0" prefWidth="600.0" translateX="72.0" translateY="-610.0">
+                     <children>
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b1" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b2" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b3" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b4" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b5" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b6" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b7" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b8" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b9" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b10" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b11" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b12" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b13" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b14" text="Button" />
+                        <Button minHeight="500.0" mnemonicParsing="false" onAction="#b15" text="Button" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <Button fx:id="afficher" mnemonicParsing="false" onAction="#afficherStat" onMouseEntered="#changeAfficher" onMouseExited="#x" style="-fx-background-color: aeaeaeae;" translateX="480.0" translateY="-760.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/stat_btn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="texteEnBas" maxHeight="59.0" maxWidth="729.0" minHeight="59.0" minWidth="729.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="729.0" style="-fx-background-color: d2d2d2;" translateX="170.0" translateY="-740.0">
+                     <graphic>
+                        <ImageView fitHeight="59.0" fitWidth="729.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/stat_im2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="label11" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="Session" textAlignment="CENTER" translateX="20.0" translateY="-1050.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label21" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="date" textAlignment="CENTER" translateX="20.0" translateY="-1045.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label12" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="Session" textAlignment="CENTER" translateX="670.0" translateY="-1130.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label22" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="date" textAlignment="CENTER" translateX="660.0" translateY="-1123.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                        <Group fx:id="group1" translateX="20.0" translateY="-1080.0">
+                     <children>
+                        <ImageView fitHeight="228.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/stat_im1.png" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="diagramme1" legendSide="LEFT" maxHeight="220.0" maxWidth="400.0" translateY="5.0" />
+                     </children>
+                  </Group>
+                  <Group fx:id="group2" translateX="660.0" translateY="-1325.0">
+                     <children>
+                        <ImageView fitHeight="228.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/stat_im1.png" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="diagramme2" legendSide="LEFT" maxHeight="220.0" maxWidth="400.0" />
+                     </children>
+                  </Group>
+                  <Group fx:id="group3" translateX="350.0" translateY="-1870.0">
+                     <children>
+                        <ImageView fitHeight="228.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/stat_im1.png" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="diagramme3" legendSide="LEFT" maxHeight="220.0" maxWidth="400.0" />
+                        <Label fx:id="label13" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="Session" textAlignment="CENTER" translateY="-60.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label23" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" text="date" textAlignment="CENTER" translateY="-30.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

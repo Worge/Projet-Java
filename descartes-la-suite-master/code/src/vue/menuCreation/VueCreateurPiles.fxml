@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.creation.ControllerCreateurPiles">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/im_interface/Création_de_piles.png" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <right>
+            <VBox minHeight="400.0" prefHeight="200.0" prefWidth="100.0" translateX="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitMenuButton fx:id="filtre" focusTraversable="false" maxWidth="200.0" minWidth="150.0" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: aeaeae;" text="Filtre" textAlignment="CENTER" textOverrun="CLIP" translateX="60.0" translateY="230.0">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Type">
+                          <items>
+                              <RadioMenuItem mnemonicParsing="false" text="Classique" />
+                              <RadioMenuItem mnemonicParsing="false" text="QCM" />
+                              <RadioMenuItem mnemonicParsing="false" text="V/F" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Thème">
+                          <items>
+                              <RadioMenuItem mnemonicParsing="false" text="Physique" />
+                              <RadioMenuItem mnemonicParsing="false" text="Histoire" />
+                              <RadioMenuItem mnemonicParsing="false" text="Géographie" />
+                              <RadioMenuItem mnemonicParsing="false" text="Anglais" />
+                              <RadioMenuItem mnemonicParsing="false" text="Maths" />
+                              <RadioMenuItem mnemonicParsing="false" text="Français" />
+                              <RadioMenuItem mnemonicParsing="false" text="Culture G." />
+                              <RadioMenuItem mnemonicParsing="false" text="Autres" />
+                          </items>
+                        </Menu>
+                    </items>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </SplitMenuButton>
+                  <Button fx:id="b4" minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#clicFiltre" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: aeaeae;" translateX="270.0" translateY="185.0">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" onDragDetected="#clicFiltre" onMouseEntered="#changeb4" onMouseExited="#x" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/loupe.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <ScrollPane minHeight="330.0" minWidth="300.0" prefHeight="200.0" prefWidth="200.0" translateX="50.0" translateY="200.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <FlowPane fx:id="fpaneCarte" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+                  <ToggleButton fx:id="tborange" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" selected="true" style="-fx-background-color: e2e2e2;" translateX="165.0" translateY="-377.0">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="carte" />
+                     </toggleGroup>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="tb1" mnemonicParsing="false" onAction="#isSelect" onMouseEntered="#labelEdition" onMouseExited="#labelEdition2" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: e2e2e2;" toggleGroup="$carte" translateX="270.0" translateY="-485.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/mc_btn1_4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ToggleButton>
+                  <Button fx:id="b3" mnemonicParsing="false" onAction="#addCarte" onMouseEntered="#changeb3" onMouseExited="#x" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: aeaeae;" translateX="90.0" translateY="-10.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/cp_btn1_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="Edition" style="-fx-background-color: eeeeee;" text="Mode édition" translateX="200.0" translateY="-690.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Ajouter" style="-fx-background-color: eeeeee;" text="Ajouter la carte" translateX="-40.0" translateY="-103.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="tout" maxHeight="10.0" maxWidth="10.0" mnemonicParsing="false" onAction="#selectAll" text="T" translateX="32.0" translateY="-486.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="nompile" promptText="Nom de la pile" translateX="30.0" translateY="230.0" />
+                  <TextField fx:id="descpile" promptText="Description de la pile" translateX="30.0" translateY="250.0" />
+                  <ScrollPane minHeight="300.0" prefHeight="200.0" prefWidth="300.0" translateX="32.0" translateY="265.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <FlowPane fx:id="fpanePile" minHeight="700.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicBACK" onMouseEntered="#labelRetour" onMouseExited="#labelRetour2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: d3d3d3;" translateX="10.0" translateY="-200.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/retour1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxHeight="135.0" maxWidth="100.0" minHeight="135.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicHOME" onMouseEntered="#labelHome" onMouseExited="#labelHome2" prefHeight="135.0" prefWidth="100.0" style="-fx-background-color: d3d3d3;" translateX="20.0" translateY="-390.0">
+                     <graphic>
+                        <ImageView fitHeight="135.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/descartess.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="b2" mnemonicParsing="false" onAction="#removeCarte" onMouseEntered="#changeb2" onMouseExited="#x" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: aeaeae;" translateX="70.0" translateY="94.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/cp_btn1_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="Home" style="-fx-background-color: eeeeee;" text="Menu" translateX="150.0" translateY="-550.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Retour" style="-fx-background-color: eeeeee;" text="Retour" translateX="150.0" translateY="-490.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Supprimer" style="-fx-background-color: eeeeee;" text="Enlever la carte" translateX="270.0" translateY="-28.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox minWidth="200.0" prefHeight="200.0" prefWidth="300.0" translateX="94.0" translateY="194.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="msg_error2" fitHeight="420.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/rousseau2.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="b1" mnemonicParsing="false" onAction="#creerPile" onMouseEntered="#changeb1" onMouseExited="#x" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: aeaeae;" translateX="45.0" translateY="20.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/cp_btn1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.apprentissage.ControllerApprentissageChoix">
+   <children>
+      <ImageView fitHeight="720" fitWidth="1080" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Ressources/im_interface/apprentisage1.png" />
+         </image></ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox minHeight="650.0" minWidth="385.0" prefHeight="200.0" prefWidth="300.0" translateX="1.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="b1" mnemonicParsing="false" onAction="#go" onMouseEntered="#changeb1" onMouseExited="#x" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: aeaeae;" translateX="35.0" translateY="650.0">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/ap_btn1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fx:id="msg_error3" fitHeight="527.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="63.0" visible="false">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/ap_im3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox maxHeight="500.0" minWidth="320.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button maxHeight="135.0" maxWidth="100.0" minHeight="135.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicHOME" onMouseEntered="#labelHome" onMouseExited="#labelHome2" prefHeight="135.0" prefWidth="100.0" translateX="20.0" translateY="2.0">
+                     <graphic>
+                        <ImageView fitHeight="135.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Ressources/im_interface/descartess.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ScrollPane maxWidth="300.0" minHeight="420.0" prefHeight="500.0" prefWidth="150.0" translateX="15.0" translateY="113.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <FlowPane fx:id="fpane" orientation="VERTICAL" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="Retour" style="-fx-background-color: eeeeee;" text="Retour" translateX="120.0" translateY="-465.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Home" style="-fx-background-color: eeeeee;" text="Menu" translateX="130.0" translateY="-528.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox minHeight="0.0" prefHeight="400.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="msg_Detail" fitHeight="512.0" fitWidth="366.0" pickOnBounds="true" preserveRatio="true" translateY="130.0">
+                     <image>
+                        <Image url="@../../Ressources/im_interface/ap_im1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nomPile" alignment="CENTER" maxWidth="300.0" minHeight="80.0" prefHeight="100.0" prefWidth="300.0" textAlignment="CENTER" translateX="30.0" translateY="-305.0" />
+                  <Label fx:id="descrPile" alignment="TOP_LEFT" maxHeight="500.0" maxWidth="300.0" minHeight="250.0" prefHeight="500.0" prefWidth="300.0" textOverrun="WORD_ELLIPSIS" translateX="35.0" translateY="-220.0" wrapText="true" />
+                  <Label fx:id="nbCarte" translateX="160.0" translateY="-260.0" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
